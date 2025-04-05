@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# vi-mode
+set -o vi
+
+# list
+alias ls='ls -F'
+alias la='ls -AF'
+alias l='ls -lhF'
+alias ll='ls -AlFh'
+
+# safe mode
+alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -i'
+
+# program alias
+alias tmux='tmux -f ~/lib/tmux.conf'
+
+# prompt
+export PS1="\w\$\033]0;\h:\w\$\007 "
+
+# xdg dirs
+export XDG_CONFIG_HOME="${HOME}/lib"
+export XDG_CACHE_HOME="${HOME}/var/cache"
+export XDG_DATA_HOME="${HOME}/var/share"
+export XDG_STATE_HOME="${HOME}/var/lib"
+export XDG_RUNTIME_DIR="${HOME}/var/run"A
+
+# urxvt{d,c} socket location
+export RXVT_SOCKET=${XDG_RUNTIME_DIR}/urxvtd.sock
+
+# go
+export GOPATH=~/var/go
+export GOBIN="${GOPATH}/bin"
+export PATH="${GOBIN}:${HOME}/bin/ln:${PATH}"
+
+# editor
+_vispath="$(command -v vis)"
+if [ "$(uname -s)" = "OpenBSD" ]; then
+	_vispath="$(command -v vise)"
+fi
+export EDITOR="${_vispath:-vi}"
+export VISUAL="$EDITOR"
+
+mkcd() {
+	if [ $# -lt 1 ]; then 
+		echo "insufficient arguments given..."
+		return 1
+	fi
+	eval path=\${$#}
+	mkdir $@ && cd $path
+}

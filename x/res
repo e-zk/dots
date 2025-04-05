@@ -1,0 +1,46 @@
+Xft.dpi:	112
+
+URxvt.font:		xft:Iosevka:style=Regular:size=12.5
+URxvt.boldFoont:	xft:Iosevka:style=Bold:size=12.5
+URxvt.letterSpace:	-1
+URxvt.scrollBar:	false
+URxvt.saveLines:	20000
+URxvt.internalBorder:	24
+URxvt.termName:		xterm-256color
+
+! special
+*.foreground:   #eeeeee
+*.background:   #000000
+*.cursorColor:  #eeeeee
+
+! black
+*.color0:       #8e8e8e
+*.color8:       #8a8a6f
+
+! red
+*.color1:       #ffa113
+*.color9:       #e47b1a
+
+! green
+*.color2:       #8aa788
+*.color10:      #c4d3c3
+
+! yellow
+*.color3:       #c8be50
+*.color11:      #c8be50
+
+! blue
+*.color4:       #c0c0c0
+*.color12:      #eeeeee
+
+! magenta
+*.color5:       #c0c0c0
+*.color13:      #eeeeee
+
+! cyan
+*.color6:       #c0c0c0
+*.color14:      #eeeeee
+
+! white
+*.color7:       #666666
+*.color15:      #6c6c58

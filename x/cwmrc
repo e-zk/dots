@@ -1,0 +1,58 @@
+# font
+fontname "Iosevka:style=Regular:size=10.5"
+
+gap 50 10 10 10
+snapdist 20
+
+ignore xclock
+ignore bar
+
+# colors
+color menubg  "#000000"
+color font    "#ffffff"
+color menufg  "#ffffff"
+color selfont "#000000"
+
+# border
+borderwidth 10
+color activeborder   "#ffffff"
+color inactiveborder "#ffffff"
+
+# application menu
+#command term		"xterm -g 80x20"
+command term		"urxvtc -g 80x20"
+command firefox		"firefox"
+
+# auto groups
+autogroup 1 "xterm",		"XTerm"
+autogroup 1 "urxvt",		"URxvt"
+autogroup 2 "Navigator",	"firefox"
+autogroup 2 "chromium-browser",	"Chromium-browser"
+autogroup 3 "org.pwmt.zathura",	"Zathura"
+autogroup 4 "Xephyr",		"Xephyr"
+autogroup 5 "nowplaying",	"mpv"
+
+# keys 
+unbind-key M-Left
+unbind-key M-Right
+
+bind-key 4S-s "shot -s"
+
+bind-key 4-l lock
+
+bind-key 4S-Up    pointer-move-up-big
+bind-key 4S-Down  pointer-move-down-big
+bind-key 4S-Left  pointer-move-left-big
+bind-key 4S-Right pointer-move-right-big
+
+bind-key M-g  window-htile
+bind-key MS-g window-vtile
+bind-key MS-t window-snap-up-left
+bind-key MS-y window-snap-up-right
+bind-key MS-b window-snap-down-left
+bind-key MS-n window-snap-down-right
+
+#bind-key XF86AudioLowerVolume "vol"
+#bind-key XF86AudioRaiseVolume "vol"
+#bind-key 4-b "bats"
+#bind-key 4-c "clock"
