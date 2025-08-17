@@ -2,19 +2,31 @@
 # xsession rc file
 . ~/.profile
 
+cleanup() {
+	pkill ssh-agent dbus-daemon urxvtd
+	kill $(pgrep -f sctd)
+	rm -f ~/.Xauthority
+	rm -f $RXVT_SOCKET
+}
+trap cleanup INT TERM QUIT
+
 export LANG=en_AU.UTF-8
 export MOZ_USE_XINPUT2=1
 export MOZ_ACCELERATED=1
-export MOZ_WEBRENDER=1
+#export MOZ_WEBRENDER=1
+export GDK_SCALE=1.5
+export QT_SCALE_FACTOR=1.5
 
 eval $(ssh-agent -s)
 
-fc-cache -f &
-xrdb -merge ~/lib/x/res &
-urxvtd -q -o -f &
+fc-cache -f
+xrdb -merge ~/lib/x/res
+
+urxvtd -q -o -f
+
 xsetroot -solid gray &
-sctd &
-#xrandr
-#xrandr --output HDMI-1 --above eDP-1 & # wait for monitors to init
-~/bin/status | (sleep 1; ~/bin/bar) 2> /dev/null &
+sctd 2500 &
+
 cwm -c ~/lib/x/cwmrc
+
+cleanup
