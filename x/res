@@ -1,12 +1,15 @@
+!Xcursor.theme: dmz
+!Xcursor.size: 16
 Xft.dpi:	112
 
-URxvt.font:		xft:Iosevka:style=Regular:size=12.5
-URxvt.boldFoont:	xft:Iosevka:style=Bold:size=12.5
 URxvt.letterSpace:	-1
+URxvt.font:		xft:CommitMono:style=Regular:size=11
+URxvt.italicFont:	xft:CommitMono:style=Regular:size=11
+URxvt.boldFont:		xft:CommitMono:style=Bold:size=11
 URxvt.scrollBar:	false
 URxvt.saveLines:	20000
 URxvt.internalBorder:	24
-URxvt.termName:		xterm-256color
+URxvt.termName:		screen-256color
 
 ! special
 *.foreground:   #eeeeee
