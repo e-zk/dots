@@ -3,6 +3,8 @@
 
 [gpg]
 	format = ssh
+[gpg.ssh]
+	allowedSignersFile = "~/lib/git/allowed_signers"
 
 [column]
 	ui = auto
