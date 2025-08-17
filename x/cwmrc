@@ -1,5 +1,5 @@
 # font
-fontname "Iosevka:style=Regular:size=10.5"
+fontname "CommitMono:style=Regular:size=10"
 
 gap 50 10 10 10
 snapdist 20
@@ -20,8 +20,11 @@ color inactiveborder "#ffffff"
 
 # application menu
 #command term		"xterm -g 80x20"
+#command term		"urxvtc -g 80x20"
 command term		"urxvtc -g 80x20"
-command firefox		"firefox"
+command firefox		"firefox -P default"
+command "  profiles"	"firefox --ProfileManager"
+command "  tmpfox"	"tmpfox"
 
 # auto groups
 autogroup 1 "xterm",		"XTerm"
