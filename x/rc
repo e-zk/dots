@@ -19,13 +19,14 @@ export QT_SCALE_FACTOR=1.5
 
 eval $(ssh-agent -s)
 
-fc-cache -f
+~/bin/monitor &
+fc-cache -f &
 xrdb -merge ~/lib/x/res
 
-urxvtd -q -o -f
+xsetroot -solid \#aaaaaa &
+sctd 6400 &
 
-xsetroot -solid gray &
-sctd 2500 &
+(status | bar) &
 
 cwm -c ~/lib/x/cwmrc
 

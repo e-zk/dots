@@ -19,9 +19,7 @@ color activeborder   "#ffffff"
 color inactiveborder "#ffffff"
 
 # application menu
-#command term		"xterm -g 80x20"
-#command term		"urxvtc -g 80x20"
-command term		"urxvtc -g 80x20"
+command term		"urxvt -g 80x20"
 command firefox		"firefox -P default"
 command "  profiles"	"firefox --ProfileManager"
 command "  tmpfox"	"tmpfox"
@@ -59,3 +57,6 @@ bind-key MS-n window-snap-down-right
 #bind-key XF86AudioRaiseVolume "vol"
 #bind-key 4-b "bats"
 #bind-key 4-c "clock"
+
+wm sdorfehs /usr/local/bin/sdorfehs
+wm fvwm /usr/X11R6/bin/fvwm
