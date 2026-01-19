@@ -2,6 +2,7 @@
 !Xcursor.size: 16
 Xft.dpi:	112
 
+! uxrvt
 URxvt.letterSpace:	-1
 URxvt.font:		xft:CommitMono:style=Regular:size=11
 URxvt.italicFont:	xft:CommitMono:style=Regular:size=11
@@ -10,6 +11,11 @@ URxvt.scrollBar:	false
 URxvt.saveLines:	20000
 URxvt.internalBorder:	24
 URxvt.termName:		screen-256color
+
+! xterm
+xterm*fontSize:		11
+xterm*scrollBar:	false
+xterm*internalBorder:	24
 
 ! special
 *.foreground:   #eeeeee
